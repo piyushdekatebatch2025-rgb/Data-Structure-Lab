@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <limits.h>
+#define V 100
+
+int minKey(int key[], bool mstSet[], int vertices) {
+	// Write your code here...
+ int min = INT_MAX, min_index;
+
+    for (int v = 0; v < vertices; v++) {
+        if (mstSet[v] == false && key[v] < min) {
+            min = key[v];
+            min_index = v;
+        }
+    }
+
+    return min_index;
+
+
+
+
+}
+void printTree(int parent[], int graph[V][V], int vertices) {
+    printf("Edge \tWeight\n");
+}
